@@ -17,4 +17,13 @@ from sklearn.discriminant_analysis import LinearDiscriminantAnalysis
 from sklearn.naive_bayes import GaussianNB
 from sklearn.svm import SVC
 
-print("HELLO, I'm NOT DEAD :D ")
+# Load Dataset
+url = "https://raw.githubusercontent.com/greenman1969/InnovationTesting/master/Dataset/Combined.csv"
+names = ['gdp','covid-deaths']
+dataset = read_csv(url, names=names)
+
+# Dataset Shape
+print(dataset.shape)
+
+print(dataset.head(20))
+
