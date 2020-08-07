@@ -1,4 +1,6 @@
+#!/usr/bin/python3
 from flask import Flask, request
+
 app = Flask(__name__)
 
 homePage = '''<!DOCTYPE html>
@@ -17,9 +19,9 @@ homePage = '''<!DOCTYPE html>
 
 @app.route('/', methods=['GET','POST'])
 def function():
-    if request.method='GET':
+    if request.method=='GET':
         return homePage
-    else if request.method='POST':
+    elif request.method=='POST':
         return "Return the estimated value"
 
 #@app.route('/<name>')
@@ -27,4 +29,4 @@ def function():
 #    return "Hello {}!".format(name)
 
 if __name__ == '__main__':
-    app.run()
+    app.run(host='0.0.0.0')
