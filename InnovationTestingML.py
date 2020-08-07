@@ -18,12 +18,15 @@ from sklearn.naive_bayes import GaussianNB
 from sklearn.svm import SVC
 
 # Load Dataset
-url = "https://raw.githubusercontent.com/greenman1969/InnovationTesting/master/Dataset/Combined.csv"
-names = ['gdp','covid-deaths']
-dataset = read_csv(url, names=names)
+url = "https://github.com/greenman1969/InnovationTesting/raw/master/Dataset/GDP.csv"
+names = ['gdp']
+gdp = read_csv(url, names=names)
 
-# Dataset Shape
-print(dataset.shape)
+url = "https://github.com/greenman1969/InnovationTesting/raw/master/Dataset/Deaths.csv"
+names = ['covid-deaths']
+deaths = read_csv(url,names=names)
 
-print(dataset.head(20))
-
+XData = deaths.values   # Death Data
+YData = gdp.values   # GDP Data
+print(XData)
+print(YData)
