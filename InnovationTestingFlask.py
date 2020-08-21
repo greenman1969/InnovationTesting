@@ -80,7 +80,7 @@ def returnValue(value, accuracy=-1):
     if not accuracy == -1:
         homePage += '''<p>Model was off by: '''+str(int(value[0]))+'''<p>'''
                     
-    homepage += '''</body>
+    homePage += '''</body>
             </html>'''
     return homePage
 
