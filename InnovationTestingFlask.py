@@ -88,7 +88,7 @@ def function():
     elif request.method=='POST':
         gdp = request.form['gdp']
         pop = request.form['pop']
-        expect = request.form['expect']
+        expect = int(request.form['expect'])
         
         features = np.array([[float(gdp), float(pop)]])
         prediction = reg.predict(features)
