@@ -66,8 +66,8 @@ homePage = '''<!DOCTYPE html>
                     <h1> Innovation Challenge Team 5 </h1>
                     <p>Enter Gross Dometic Product (GDP) in US Dollars and population below:</p>
                     <form method="POST" action="/">
-                        <input name="gdp" placeholder="GDP">
-			            <input name="pop" placeholder="Population">
+                        <input type="number" name="gdp" placeholder="GDP">
+			            <input type="number" name="pop" placeholder="Population">
                         <input type="submit">
                     </form>
                 </body>
