@@ -96,7 +96,7 @@ def function():
         features = np.array([[float(gdp), float(pop)]])
         prediction = reg.predict(features)
 
-         if not expect == '':
+        if not expect == '':
             #compare prediction to actual value
             residual = abs(expect - prediction)
             return returnValue(prediction, residual)
