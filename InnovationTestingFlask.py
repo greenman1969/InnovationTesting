@@ -47,6 +47,7 @@ homePage = '''<!DOCTYPE html>
                 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
                 <style> 
                     body {text-align: center;}
+                    html {background-color: light-green;}
                 </style>
                 </head>
                 <body>
@@ -72,6 +73,7 @@ def returnValue(value, accuracy=-1):
                 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
                 <style> 
                     body {text-align: center;}
+                    html {background-color: light-green;}
                 </style>
                 </head>
                 <body>
