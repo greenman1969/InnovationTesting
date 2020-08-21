@@ -46,11 +46,8 @@ homePage = '''<!DOCTYPE html>
                 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
                 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
                 <style> 
-                    body {text-align: center; background-color: DarkSeaGreen;}
+                    body {text-align: center; background-color: DarkSeaGreen}
                     html {background-color: DarkSeaGreen;}
-                    h1 {background-color: DarkSeaGreen;}
-                    p {background-color: DarkSeaGreen;}
-                    form {background-color: DarkSeaGreen;}
                 </style>
                 </head>
                 <body>
@@ -77,7 +74,6 @@ def returnValue(value, accuracy=-1):
                 <style> 
                     body {text-align: center; background-color: DarkSeaGreen}
                     html {background-color: DarkSeaGreen;}
-
                 </style>
                 </head>
                 <body>
