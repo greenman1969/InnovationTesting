@@ -109,10 +109,13 @@ def function():
             #compare prediction to actual value
             residual = 100-100*abs((expect - prediction)/expect)
             offby = abs(expect-prediction)
+            conn.execute(generateSQLString(gdp,pop,expect,prediction))
             return returnValue(prediction, residual, offby)
+        conn.execute(generateSQLString(gdp,pop,0,prediction))
         return returnValue(prediction)
 
-
+def generateSQLString(gdp, population, expect, result):
+    return "insert into results (gdp, population, expect, result) values ("+str(gdp)+", "+str(population)+", "+str(expect)+", "+str(result)+");"
 
 if __name__ == '__main__':
     app.run(host='0.0.0.0')
