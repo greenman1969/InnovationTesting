@@ -1,9 +1,14 @@
 #!/usr/bin/python3
-from flask import Flask, request
+from flask import Flask, request, g
 import csv
 import pandas as pd
 import numpy as np
 from sklearn.linear_model import LinearRegression
+import sqlite3
+
+DATABASE = 'database.db'
+conn = sqlite3.connect('database.db')
+print("Opened Database")
 
 #import data from csv into dataframe 'df'
 df = pd.read_csv('Dataset/WholeData.csv')
@@ -57,7 +62,7 @@ homePage = '''<!DOCTYPE html>
                         <input type="number" name="gdp" placeholder="GDP" min="0">
 			            <input type="number" name="pop" placeholder="Population" min="0">
                         <input type="number" name="expect" placeholder="Expected Value" min="0">
-                        <input type="submit">
+                        <input type="submit" class="btn btn-light">
                     </form>
                 </body>
             </html>'''
@@ -78,7 +83,7 @@ def returnValue(value, accuracy=-1, offBy=-1):
                 </head>
                 <body>
                     <h1> Innovation Challenge Team 5 </h1>
-                    <p>Your expected deaths are: '''+str(int(value[0]))+'''</p>'''
+                    <p>Your expected deaths are: '''+str(int(value[0]))+''' deaths</p>'''
     if not accuracy == -1:
         homePage += '''<p>Model was '''+str(float(accuracy))+'''&#37; accurate<p>'''
     if not offBy == -1:
