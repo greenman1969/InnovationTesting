@@ -78,7 +78,7 @@ def returnValue(value, accuracy=-1):
                     <h1> Innovation Challenge Team 5 </h1>
                     <p>Your expected deaths are: '''+str(int(value[0]))+'''</p>'''
     if not accuracy == -1:
-        homePage += '''<p>Model was off by: '''+str(float(accuracy))+'''<p>'''
+        homePage += '''<p>Model was '''+str(float(accuracy))+'''&#37; accurate<p>'''
                     
     homePage += '''</body>
             </html>'''
@@ -98,7 +98,7 @@ def function():
 
         if not expect == '':
             #compare prediction to actual value
-            residual = abs((expect - prediction)/expect)
+            residual = 100-100*abs((expect - prediction)/expect)
             return returnValue(prediction, residual)
         return returnValue(prediction)
 
