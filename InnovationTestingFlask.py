@@ -55,6 +55,7 @@ homePage = '''<!DOCTYPE html>
                     <form method="POST" action="/">
                         <input type="number" name="gdp" placeholder="GDP" min="0">
 			            <input type="number" name="pop" placeholder="Population" min="0">
+                        <input type="number" name="expect" placeholder="Expected Value" min="0">
                         <input type="submit">
                     </form>
                 </body>
@@ -84,6 +85,8 @@ def function():
     elif request.method=='POST':
         gdp = request.form['gdp']
         pop = request.form['pop']
+        expect = request.form['expect']
+        print(expect)
         features = np.array([[float(gdp), float(pop)]])
         prediction = reg.predict(features)
         print(prediction)
