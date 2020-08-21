@@ -98,7 +98,7 @@ def function():
 
         if not expect == '':
             #compare prediction to actual value
-            residual = abs((expect - prediction)/expected)
+            residual = abs((expect - prediction)/expect)
             return returnValue(prediction, residual)
         return returnValue(prediction)
 
