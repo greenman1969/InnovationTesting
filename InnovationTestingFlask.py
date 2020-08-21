@@ -9,14 +9,14 @@ homePage = '''<!DOCTYPE html>
                     <style>
                         body {background-color: #32a852; opacity: .3; border-style:solid; border-color:grey;}
                         h1 {color:#033c8c; font-size: 20px;}
-                        
-                    </style> 
+                    </style>
                 </head>
                 <body>
-                    <h1> Innovation Challenge Team 5 </h1> 
-                    <p>Enter Gross Dometic Product (GDP) in US Dollars bellow:</p>
+                    <h1> Innovation Challenge Team 5 </h1>
+                    <p>Enter Gross Dometic Product (GDP) in US Dollars and population below:</p>
                     <form method="POST" action="/">
                         <input name="gdp">
+			<input name="pop">
                         <input type="submit">
                     </form>
                 </body>
