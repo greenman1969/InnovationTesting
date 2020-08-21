@@ -60,9 +60,9 @@ homePage = '''<!DOCTYPE html>
                     <h1> Innovation Challenge Team 5 </h1>
                     <p>Enter Gross Dometic Product (GDP) in US Dollars and population below:</p>
                     <form method="POST" action="/">
-                        <input type="number" name="gdp" placeholder="GDP" min="0">
-			            <input type="number" name="pop" placeholder="Population" min="0">
-                        <input type="number" name="expect" placeholder="Expected Value" min="0">
+                        <input type="number" name="gdp" placeholder="GDP" min="0" required>
+			            <input type="number" name="pop" placeholder="Population" min="0" required>
+                        <input type="number" name="expect" placeholder="Expected Deaths" min="0">
                         <input type="submit" class="btn btn-light">
                     </form>
                 </body>
@@ -93,7 +93,6 @@ def returnValue(value, accuracy=-1, offBy=-1):
     homePage += '''</body>
             </html>'''
     return homePage
-
 @app.route('/', methods=['GET','POST'])
 def function():
     if request.method=='GET':
