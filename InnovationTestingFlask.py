@@ -8,20 +8,26 @@ homePage = '''<!DOCTYPE html>
                 <head>
                     <style>
                         html {
-				background-color: #32a852;
+				margin: auto; 
+				width: 50%; 
+				background-color: ##a9e8a9;
                                 border-style:solid;
-				border-color:grey;}
+				border-color:grey;
+				border-width: 1.5px;
+				}
+				
                         h1 {
 				color:#033c8c;
-                      		font-size: 20px;}
+                      		font-size: 20px;
+				text-align: center;}
                     </style>
                 </head>
                 <body>
                     <h1> Innovation Challenge Team 5 </h1>
                     <p>Enter Gross Dometic Product (GDP) in US Dollars and population below:</p>
                     <form method="POST" action="/">
-                        <input name="gdp">
-			<input name="pop">
+                        <input name="gdp" value="GDP">
+			<input name="pop" value="Population">
                         <input type="submit">
                     </form>
                 </body>
