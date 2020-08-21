@@ -112,9 +112,11 @@ def function():
             residual = 100-100*abs((expect - prediction)/expect)
             offby = abs(expect-prediction)
             conn.execute(generateSQLString(gdp,pop,expect,prediction))
+            conn.commit()
             conn.close()
             return returnValue(prediction, residual, offby)
         conn.execute(generateSQLString(gdp,pop,0,prediction))
+        conn.commit()
         conn.close()
         return returnValue(prediction)
 
