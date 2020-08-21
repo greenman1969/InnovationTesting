@@ -70,6 +70,9 @@ def returnValue(value, accuracy=0):
                 <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
                 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
                 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+                <style> 
+                    body {text-align: center;}
+                </style>
                 </head>
                 <body>
                     <h1> Innovation Challenge Team 5 </h1>
@@ -86,17 +89,20 @@ def function():
         gdp = request.form['gdp']
         pop = request.form['pop']
         expect = request.form['expect']
-        print(expect)
+        
         features = np.array([[float(gdp), float(pop)]])
         prediction = reg.predict(features)
+        
+        if not expect == '':
+            #compare prediction to actual value
+            residual = abs(expect - prediction)
+            print(residual)
         print(prediction)
 
 
         return returnValue(prediction)
 
-#@app.route('/<name>')
-#def hello_name(name):
-#    return "Hello {}!".format(name)
+
 
 if __name__ == '__main__':
     app.run(host='0.0.0.0')
