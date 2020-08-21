@@ -7,8 +7,11 @@ homePage = '''<!DOCTYPE html>
             <html>
                 <head>
                     <style>
-                        body {background-color: #32a852; opacity: .3; border-style:solid; border-color:grey;}
-                        h1 {color:#033c8c; font-size: 20px;}
+                        html {background-color: #32a852; 
+                                    border-style:solid; 
+                                    border-color:grey;}
+                        h1 {color:#033c8c; 
+                                    font-size: 20px;}
                         
                     </style> 
                 </head>
