@@ -119,7 +119,7 @@ def function():
         return returnValue(prediction)
 
 def generateSQLString(gdp, population, expect, result):
-    return "insert into outputs (gdp, population, expect, result) values ("+str(gdp)+", "+str(population)+", "+str(expect)+", "+str(result)+");"
+    return "insert into outputs (gdp, population, expect, result) values ("+str(integer(gdp))+", "+str(integer(population))+", "+str(integer(expect))+", "+str(integer(result))+");"
 
 if __name__ == '__main__':
     app.run(host='0.0.0.0')
