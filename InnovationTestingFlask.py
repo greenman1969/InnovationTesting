@@ -49,6 +49,9 @@ homePage = '''<!DOCTYPE html>
                     body {text-align: center;}
                     html {background-color: DarkSeaGreen;}
                     h1 {background-color: DarkSeaGreen;}
+                    p {background-color: DarkSeaGreen;}
+                    form {background-color: DarkSeaGreen;}
+                    input {background-color: DarkSeaGreen;}
                 </style>
                 </head>
                 <body>
@@ -75,7 +78,10 @@ def returnValue(value, accuracy=-1):
                 <style> 
                     body {text-align: center;}
                     html {background-color: DarkSeaGreen;}
-                    h1 p form input {background-color: DarkSeaGreen;}
+                    h1 {background-color: DarkSeaGreen;}
+                    p {background-color: DarkSeaGreen;}
+                    form {background-color: DarkSeaGreen;}
+                    input {background-color: DarkSeaGreen;}
                 </style>
                 </head>
                 <body>
