@@ -72,7 +72,7 @@ def returnValue(value, accuracy=0):
                 </head>
                 <body>
                     <h1> Innovation Challenge Team 5 </h1>
-                    <p>Your expected deaths are: '''+str(value[0])+'''</p>
+                    <p>Your expected deaths are: '''+str(int(value[0]))+'''</p>
                 </body>
             </html>'''
     return homePage
