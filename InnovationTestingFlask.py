@@ -62,7 +62,7 @@ homePage = '''<!DOCTYPE html>
                 </body>
             </html>'''
 
-def returnValue(value, accuracy=-1):
+def returnValue(value, accuracy=-1, offBy=-1):
     homePage = '''<!DOCTYPE html>
             <html>
                 <head>
@@ -81,6 +81,8 @@ def returnValue(value, accuracy=-1):
                     <p>Your expected deaths are: '''+str(int(value[0]))+'''</p>'''
     if not accuracy == -1:
         homePage += '''<p>Model was '''+str(float(accuracy))+'''&#37; accurate<p>'''
+    if not offBy == -1:
+        homePage += '''<p>Model was off by: '''+str(int(offBy))+''' deaths</p>'''
                     
     homePage += '''</body>
             </html>'''
@@ -101,7 +103,8 @@ def function():
         if not expect == '':
             #compare prediction to actual value
             residual = 100-100*abs((expect - prediction)/expect)
-            return returnValue(prediction, residual)
+            offby = abs(expect-prediction)
+            return returnValue(prediction, residual, offby)
         return returnValue(prediction)
 
 
