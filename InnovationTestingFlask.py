@@ -61,7 +61,7 @@ homePage = '''<!DOCTYPE html>
                 </body>
             </html>'''
 
-def returnValue(value, accuracy=0):
+def returnValue(value, accuracy=-1):
     homePage = '''<!DOCTYPE html>
             <html>
                 <head>
@@ -76,8 +76,11 @@ def returnValue(value, accuracy=0):
                 </head>
                 <body>
                     <h1> Innovation Challenge Team 5 </h1>
-                    <p>Your expected deaths are: '''+str(int(value[0]))+'''</p>
-                </body>
+                    <p>Your expected deaths are: '''+str(int(value[0]))+'''</p>'''
+    if not accuracy == -1:
+        homePage += '''<p>Model was off by: '''+srt(int(value[0]))+'''<p>'''
+                    
+    homepage += '''</body>
             </html>'''
     return homePage
 
@@ -92,14 +95,11 @@ def function():
         
         features = np.array([[float(gdp), float(pop)]])
         prediction = reg.predict(features)
-        
-        if not expect == '':
+
+         if not expect == '':
             #compare prediction to actual value
             residual = abs(expect - prediction)
-            print(residual)
-        print(prediction)
-
-
+            return returnValue(prediction, residual)
         return returnValue(prediction)
 
 
