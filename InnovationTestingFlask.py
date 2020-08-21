@@ -48,7 +48,7 @@ homePage = '''<!DOCTYPE html>
                 <style> 
                     body {text-align: center;}
                     html {background-color: DarkSeaGreen;}
-                    h1 p form input {background-color: DarkSeaGreen;}
+                    h1 {background-color: DarkSeaGreen;}
                 </style>
                 </head>
                 <body>
