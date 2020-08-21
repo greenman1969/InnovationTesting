@@ -78,7 +78,7 @@ def returnValue(value, accuracy=-1):
                     <h1> Innovation Challenge Team 5 </h1>
                     <p>Your expected deaths are: '''+str(int(value[0]))+'''</p>'''
     if not accuracy == -1:
-        homePage += '''<p>Model was off by: '''+srt(int(value[0]))+'''<p>'''
+        homePage += '''<p>Model was off by: '''+str(int(value[0]))+'''<p>'''
                     
     homepage += '''</body>
             </html>'''
