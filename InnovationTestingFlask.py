@@ -72,6 +72,7 @@ def returnValue(value, accuracy=0):
                     <p>Your expected deaths are: '''+str(value)+'''</p>
                 </body>
             </html>'''
+    return homePage
 
 @app.route('/', methods=['GET','POST'])
 def function():
