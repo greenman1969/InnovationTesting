@@ -9,6 +9,7 @@ import sqlite3
 DATABASE = 'database.db'
 conn = sqlite3.connect('database.db')
 print("Opened Database")
+conn.close()
 
 #import data from csv into dataframe 'df'
 df = pd.read_csv('Dataset/WholeData.csv')
@@ -98,6 +99,7 @@ def function():
     if request.method=='GET':
         return homePage
     elif request.method=='POST':
+        conn = sqlite3.connect('database.db')
         gdp = request.form['gdp']
         pop = request.form['pop']
         expect = float(request.form['expect'])
@@ -110,8 +112,10 @@ def function():
             residual = 100-100*abs((expect - prediction)/expect)
             offby = abs(expect-prediction)
             conn.execute(generateSQLString(gdp,pop,expect,prediction))
+            conn.close()
             return returnValue(prediction, residual, offby)
         conn.execute(generateSQLString(gdp,pop,0,prediction))
+        conn.close()
         return returnValue(prediction)
 
 def generateSQLString(gdp, population, expect, result):
