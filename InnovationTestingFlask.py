@@ -91,14 +91,14 @@ def function():
     elif request.method=='POST':
         gdp = request.form['gdp']
         pop = request.form['pop']
-        expect = int(request.form['expect'])
+        expect = float(request.form['expect'])
         
         features = np.array([[float(gdp), float(pop)]])
         prediction = reg.predict(features)
 
         if not expect == '':
             #compare prediction to actual value
-            residual = abs(expect - prediction)
+            residual = abs((expect - prediction)/expected)
             return returnValue(prediction, residual)
         return returnValue(prediction)
 
